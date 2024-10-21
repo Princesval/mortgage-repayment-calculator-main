@@ -7,6 +7,7 @@ const emptyDiv = document.getElementById("empty-div");
 const completedDiv = document.getElementById("completed-div");
 const repaymentResult = document.getElementById("repayments-p");
 const totalResult = document.getElementById("repay-p");
+const clearBtn = document.getElementById("clear-btn");
 
 calculatorBtn.addEventListener('click', () => {
     if (termInputValue.value === '' || interestInputValue.value === '' || amountInputValue.value === '') {
@@ -33,7 +34,12 @@ calculatorBtn.addEventListener('click', () => {
         // console.log(interestInputValue.value);
         // console.log(amountInputValue.value);
     }
+})
 
+clearBtn.addEventListener('click', () => {
+    amountInputValue.value = '';
+    termInputValue.value = '';
+    interestInputValue.value = '';
 })
 
 // End of Calculator

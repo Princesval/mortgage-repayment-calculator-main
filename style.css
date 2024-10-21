@@ -67,6 +67,7 @@ h1 {
     background-color: var(--White);
     color: var(--Slate700);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 label {
