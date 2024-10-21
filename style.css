@@ -1,0 +1,318 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Slate100: hsl(202, 86%, 94%);
+    --Slate300: hsl(203, 41%, 72%);
+    --Slate500: hsl(200, 26%, 54%);
+    --Slate700: hsl(200, 24%, 40%);
+    --Slate900: hsl(202, 55%, 16%);
+
+    /* Primary */
+
+    --Lime: hsl(61, 70%, 52%);
+    --Lime2: hsla(61, 100%, 70%, 0.800);
+    --Red: hsl(4, 69%, 50%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    background-color: var(--Slate100);
+}
+
+main {
+    background-color: var(--White);
+    display: flex;
+    max-width: 1000px;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#mortage-calculator {
+    background-color: var(--White);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+div#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--Slate900);
+    font-size: 1.5em;
+}
+
+#clear-btn {
+    border: none;
+    background-color: var(--White);
+    color: var(--Slate700);
+    text-decoration: underline;
+}
+
+label {
+    color: var(--Slate700);
+}
+
+.amount-input-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid var(--Slate900);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.amount-input-container span {
+    color: var(--Slate700);
+    padding: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: var(--Slate100);
+    border-radius: 5px;
+}
+
+#amount-input {
+    width: 100%;
+    font-size: 1.2em;
+    color: var(--Slate900);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.term-input-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid var(--Slate900);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.term-input-container span {
+    color: var(--Slate700);
+    padding: 13px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--Slate100);
+    border-radius: 5px;
+}
+
+.term-input-container input {
+    width: 100%;
+    font-size: 1.2em;
+    color: var(--Slate900);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.interest-input-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid var(--Slate900);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.interest-input-container span {
+    color: var(--Slate700);
+    padding: 13px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--Slate100);
+    border-radius: 5px;
+}
+
+.interest-input-container input {
+    width: 100%;
+    font-size: 1.2em;
+    color: var(--Slate900);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+#term-interest {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 30px;
+}
+
+#mortage-type {
+    margin-top: 20px;
+}
+
+#mortage-type > p {
+    color: var(--Slate700);
+    margin-bottom: 10px;
+}
+
+#mortage-type > div {
+    border: 1px solid var(--Slate700);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#mortage-type > div > label {
+    margin-left: 10px;
+    color: var(--Slate900);
+    font-weight: bold;
+}
+
+#caculate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--Lime);
+    color: var(--Slate900);
+    font-weight: bold;
+    padding: 10px 15px;
+    width: 65%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#empty-div, #completed-div {
+    background-color: var(--Slate900);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 50px;
+}
+
+#empty-div {
+    text-align: center;
+    padding-top: 100px;
+    display: block;
+}
+
+img#illustration-empty {
+    margin: auto;
+    width: 220px;
+}
+
+#empty-div > h2 {
+    color: var(--White);
+    margin-bottom: 10px;
+}
+
+#empty-div > p {
+    color: var(--Slate300);
+}
+
+#completed-div {
+    display: none;
+}
+
+#completed-div > h2 { 
+    color: var(--White);
+    margin-bottom: 10px;
+}
+
+#results {
+    margin-top: 15px;
+    border-top: 3px solid var(--Lime);
+    background-color: hsl(202, 55%, 10%);
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#results > h3 {
+    color: var(--Slate500);
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#repayments-p {
+    color: var(--Lime);
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#repay-p {
+    color: var(--White);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#completed-div > p {
+    color: var(--Slate500);
+}
+
+hr {
+    border: 1px solid var(--Slate700);
+}
+
+@media(max-width: 900px) {
+    #repayments-p {
+        font-size: 2em;
+    }
+
+    #repay-p {
+        font-size: 1.2em;
+    }
+}
+
+@media(max-width: 425px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    #mortage-calculator, #empty-div, #completed-div {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+}
